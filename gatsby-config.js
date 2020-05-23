@@ -1,19 +1,33 @@
 module.exports = {
   siteMetadata: {
-    title: `Patrick M. Garcia - Blog`,
+    title: `Patrick M. Garcia`,
     author: {
-      name: `Patrick Kyle M. Garcia`,
+      name: `Patrick M. Garcia`,
       summary: `Web developer.`,
+      email: `pkmgarcia@gmail.com`,
     },
-    description: `My personal blog.`,
+    description: `My personal GitHub Page.`,
     siteUrl: `https://github.com/pkmgarcia/pkmgarcia.github.io`,
   },
   plugins: [
+    `gatsby-plugin-layout`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/content/education`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/work-experience`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/projects`,
       },
     },
     {
@@ -80,4 +94,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};

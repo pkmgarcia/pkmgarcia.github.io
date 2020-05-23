@@ -1,0 +1,8 @@
+{
+  "name": "Earthquake Early Warning",
+  "role": "Developer",
+  "points": [
+    "Graduation requirement for B.S.S.E. degree at San Jose State University.",
+    "Designed and implemented a prototype web application that uses machine learning to notify subscribers of possible earthquakes."
+  ]
+}

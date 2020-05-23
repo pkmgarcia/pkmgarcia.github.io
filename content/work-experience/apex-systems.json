@@ -1,0 +1,11 @@
+{
+  "company": "Apex Systems",
+  "role": "Web Developer, Data Analyst",
+  "points": [
+    "Maintain an existing Flask service and Python data pipeline to rapidly design and implement prototype dashboards.",
+    "Design, implement and maintain a React-based dashboard and Flask microservice to build a service used by project managers to triage tickets based on geographical regions.",
+    "Help design, implement and maintain a React-based dashboard, Flask microservice, and Python data pipeline to build a service for sampling and analyzing subsets of a large, geographic ticket repository.",
+    "Regularly communicate with clients and consume business documents in order to conceptualize prototypes and gather use cases.",
+    "Close an average of 31 tickets per quarter, which consists of user troubleshooting, code integration, and application feature requests."
+  ]
+}
