@@ -33,7 +33,7 @@ const FooterContainer = styled.div`
   flex: none;
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -46,11 +46,13 @@ const Layout = ({ children }) => {
 
   const siteTitle = data.site.siteMetadata.title;
 
+  const { pathname } = location;
+
   return (
     <LayoutContainer>
       <SEO title={siteTitle} />
       <HeaderContainer>
-        <Header title={siteTitle} />
+        <Header title={siteTitle} pathname={pathname} />
       </HeaderContainer>
       <ContentContainer>
         <main>{children}</main>

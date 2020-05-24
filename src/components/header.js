@@ -4,6 +4,14 @@ import styled from "styled-components";
 
 import PaddedContainer from "./core/padded-container";
 
+const TabLink = styled(Link)`
+  ${({ active }) =>
+    active &&
+    `text-decoration: none;
+     color: inherit;
+     font-weight: bold;`}
+`;
+
 const routes = [
   { title: "Home", path: "/" },
   { title: "Resume", path: "/resume" },
@@ -19,16 +27,16 @@ const TabsContainer = styled.div`
   }
 `;
 
-const Header = ({ title }) => {
+const Header = ({ title, pathname }) => {
   return (
     <header>
       <PaddedContainer>
         <h1>{title}</h1>
         <TabsContainer>
           {routes.map(({ title: routeTitle, path }, index) => (
-            <Link key={index} to={path}>
+            <TabLink active={path === pathname} key={index} to={path}>
               {routeTitle}
-            </Link>
+            </TabLink>
           ))}
         </TabsContainer>
       </PaddedContainer>
